@@ -1,5 +1,5 @@
 const video = document.getElementById('video');
-
+const aiButton = document.querySelector("#ai-button")
 // Access the webcam stream and assign it to the video element
 navigator.mediaDevices.getUserMedia({ video: true })
   .then(stream => {
@@ -26,3 +26,7 @@ cocoSsd.load().then(model => {
     detectObjects();
   });
 });
+
+aiButton.addEventListener("click", function(){
+    console.log('hi')
+})

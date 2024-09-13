@@ -14,24 +14,49 @@ body {
     height: 50vh; /* Each takes half of the viewport height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'SUSE', sans-serif; /* Use the SUSE font */
 }
 
 #fridge {
-    background-color: lightgray; /* Example background for fridge div */
+    background-color: rgb(77, 74, 74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #video-fridge{
     background-color: rgb(77, 74, 74);
-    height: 55vh
+    height: 55vh;
+    justify-content: center;
+    align-items: center;
 }
 
 #video-fridge video {
     width: 450px;
     height: 250px;
     object-fit: cover; /* Ensures the video covers the entire area */
+}
+
+#ai-header{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(77, 74, 74);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#ai-button{
+    font-family: 'SUSE', sans-serif;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: lightblue;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
 .fridge-button{
@@ -54,6 +79,7 @@ body {
     align-items: center;
     justify-content: space-around;
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 .background-vid{
@@ -64,4 +90,36 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+}
+
+#fridge-items{
+    height: 450px;
+    width: 1400px;
+    background-color: rgb(249, 231, 210);
+    display: grid;
+    grid-template: 1/1/3/3;
+}
+
+#veggies{
+    grid-area: 1/2/2/3;
+    background-color: rgb(170, 177, 175);
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#fruits{
+    grid-area: 0/2/0/2;
+    background-color: rgb(170, 177, 175);
+    border-bottom: 1px solid black;
+}
+
+#dairy{
+    grid-area: 2/2/3/3;
+    background-color: rgb(170, 177, 175);
+    border-left: 1px solid black;
+}
+
+#other{
+    grid-area: 2/0/3/1;
+    background-color: rgb(170, 177, 175);
 }
