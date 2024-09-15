@@ -1,6 +1,7 @@
 const video = document.getElementById('video');
 const aiButton = document.querySelector("#ai-button");
 const veggieContainer = document.querySelector("#veggie-container");
+const fruitsContainer = document.querySelector("#fruits-container")
 let currentFridge = [];
 
 // Access the webcam stream and assign it to the video element
@@ -27,15 +28,21 @@ cocoSsd.load().then(model => {
             console.log(currentFridge);
             const newItem = document.createElement('img');
             newItem.classList.add('item-img');
-            newItem.src = 'pizza-item.png';
-            veggieContainer.appendChild(newItem);
+            if (predictions.map(p => p.class)[0] == 'banana'){
+            newItem.src = 'banana-item.png';
+            fruitsContainer.appendChild(newItem);}
+
+            if (predictions.map(p => p.class).includes('apple')){
+                newItem.src = 'apple-item.png';
+                fruitsContainer.appendChild(newItem);}
+                
             currentFridge = predictions.map(p => p.class); // Update currentFridge
           }
         });
       }
     };
     // Run detectObjects every 10 seconds
-    setInterval(detectObjects, 10000);
+    setInterval(detectObjects, 3000);
   });
 });
 
