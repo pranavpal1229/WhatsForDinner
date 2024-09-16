@@ -48,15 +48,15 @@ body {
 #ai-button{
     font-family: 'SUSE', sans-serif;
     height: 30px;
-    width: 30px;
-    border-radius: 100%;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
-    background-color: lightblue;
+    background-color: rgb(77, 74, 74);
     margin-right: 10px;
     margin-top: 5px;
+    color: white;
 }
 
 .fridge-button{
