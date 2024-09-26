@@ -38,7 +38,7 @@ cocoSsd.load().then(model => {
                 newItem.src = 'broccoli-item.png';
                 veggieContainer.appendChild(newItem);}
 
-            currentFridge = predictions.map(p => p.class); // Update currentFridge
+            currentFridge = predictions.map(p => p.class); 
           }
         });
       }

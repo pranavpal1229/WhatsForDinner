@@ -8,15 +8,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
     </style>
+    <script src="https://kit.fontawesome.com/05db80e85c.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="wrapper">
         <h2>What's For Dinner?</h2>
 
         <!-- Add the form and input element -->
-        <form>
-            <input type="text" id="dinnerInput" placeholder="Type your dinner idea...">
+        <form class="wfd">
+            <div class="input-container">
+                <input type="text" id="dinnerInput" placeholder="Type your dinner idea...">
+                <button class="submit"><i class="fa-solid fa-utensils fa-xl" style="color: #ffffff;"></i></button>
+            </div>
         </form>
+        
 
         <div class="box">
             <div></div>
@@ -32,4 +38,5 @@
         </div>
     </div>
 </body>
+    <script src="openai.js"></script>
 </html>
